@@ -6,7 +6,12 @@ Miniatur database yang menggunakan google spreadsheet untuk Google Apps Script.
 
 ## Dokumentasi
 
-Selengkapnya ada di blog
+![Sheet Sample](https://blog.banghasan.com/note/assets/images/GAS2/sheetDB.jpg)
+
+Contoh Sheet: [https://docs.google.com/spreadsheets/d/1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8/edit?usp=sharing)
+
+Selengkapnya ada di [blog.banghasan.com](http://j.mp/minisheetdb)
+
 
 ## Support
 
@@ -22,6 +27,27 @@ Berikut Google Script Library -nya :
 
 > Sesuaikan dengan Editor nya, dan selalu pilih yang versi dengan angka paling besar.
 
+## Contoh Code
+
+![test Mini Sheet DB](https://blog.banghasan.com/note/assets/images/GAS2/testMiniDB.jpg)
+
+Simple:
+
+```javascript
+var db = new miniSheetDB.init('1B8JSBXqV0sIFZsuwDHQ8wOADFIAxgB7WDpJRh1JUei8');
+db.regex = true;
+
+function testGetALL() {
+    var hasil = db.getAll();
+    Logger.log(hasil);
+}
+
+function testGetKunci() {
+    var hasil = db.get('nama');
+    Logger.log(hasil);
+}
+
+```
 
 ## Dokumentasi
 
@@ -78,3 +104,11 @@ Paramater untuk mengonfig mini sheet DB nya. termasuk juga daftar method nya.
 - `has(kunci)` mengecek kunci ada atau tidak. Hasil true/false. Contoh: `db.has(kunci)`
 - `get(kunci)` mendapatkan data sesuai kunci. Contoh: `db.get(kunci)`
 - `getAll()` mendapatkan semua data.
+
+## Video
+
+Ikuti materi video di youtube:
+
+- [PlayList TIPS TRIK](https://www.youtube.com/playlist?list=PLcHeM3NRSws4v2y2pkyfJ_Zbs3uw3QOS8)
+- [PlayList GAS-2](https://www.youtube.com/playlist?list=PLcHeM3NRSws4BVgNv-No3L55Azey1oQ-x)
+- [PlayList GAS-1](https://www.youtube.com/playlist?list=PLcHeM3NRSws5yFYHG0l5AVT97xinQyeaK)
